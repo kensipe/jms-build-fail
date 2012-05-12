@@ -1,9 +1,11 @@
 this is an example where order of the repos matters
 
-gradle build 
+	gradle build 
+	
 **fails**
 
 where
 
-gradle -b working.gradle build
+	gradle -b working.gradle build
+
 **succeeds**
