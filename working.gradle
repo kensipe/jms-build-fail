@@ -1,0 +1,28 @@
+apply plugin: 'java'
+
+def springVersion = '3.1.0.RELEASE'
+
+version = "0.4-9"
+
+repositories {
+    mavenRepo url: 'https://repository.jboss.org/nexus/content/repositories/thirdparty-releases'
+    mavenCentral()
+
+    mavenRepo url: 'http://repo1.maven.org/maven2/com/thoughtworks'
+}
+
+dependencies {
+
+    compile 'org.slf4j:slf4j-log4j12:1.4.2'
+    compile 'log4j:log4j:1.2.14'
+    compile 'commons-lang:commons-lang:2.6'
+    compile 'com.google.guava:guava:12.0'
+
+    compile 'com.thoughtworks.xstream:xstream:1.4.2'  
+    compile 'javax.jms:jms:1.1'
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.0-rc-3'
+}
